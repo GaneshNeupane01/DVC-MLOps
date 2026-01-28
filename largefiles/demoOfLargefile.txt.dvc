@@ -1,0 +1,5 @@
+outs:
+- md5: c9fec87f6257f6b6ca427a370269f2a0
+  size: 19
+  hash: md5
+  path: demoOfLargefile.txt
