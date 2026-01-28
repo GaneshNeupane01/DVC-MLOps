@@ -1,1 +1,2 @@
 this is other small files.
+changes in small file.
