@@ -6,3 +6,12 @@ stages:
     - preprocess.py
     outs:
     - data/processed.txt
+  train:
+    cmd: python train.py
+    deps:
+    - data/processed.txt
+    - params.yaml
+    - train.py
+    metrics:
+    - metrics.json:
+        cache: false
