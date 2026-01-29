@@ -2,7 +2,7 @@ stages:
   preprocess:
     cmd: python preprocess.py
     deps:
-    - data/data.txt
+    - large_files/demoOfLargefile.txt
     - preprocess.py
     outs:
     - data/processed.txt
@@ -13,5 +13,5 @@ stages:
     - params.yaml
     - train.py
     metrics:
-    - metrics.json:
+    - output/metrics.json:
         cache: false

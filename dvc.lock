@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python preprocess.py
+    deps:
+    - path: large_files/demoOfLargefile.txt
+      hash: md5
+      md5: 5cd3665dd81fe0b5b798cc3c12878a00
+      size: 73
+    - path: preprocess.py
+      hash: md5
+      md5: 8588d538500cede1eb815ea99018bef4
+      size: 270
+    outs:
+    - path: data/processed.txt
+      hash: md5
+      md5: cf034122eecd68c6523baf6d69e805d9
+      size: 74
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/processed.txt
+      hash: md5
+      md5: cf034122eecd68c6523baf6d69e805d9
+      size: 74
+    - path: params.yaml
+      hash: md5
+      md5: 2e4b0dab259d2d6e040747f7225a3342
+      size: 30
+    - path: train.py
+      hash: md5
+      md5: ca8f1f314f5f0e6091e745e281440982
+      size: 539
+    outs:
+    - path: output/metrics.json
+      hash: md5
+      md5: 618b785de06d73bf752157cb16cafdd4
+      size: 34
