@@ -1,5 +1,5 @@
 outs:
-- md5: 43cf3b772de4976e33b389b43a145e49
-  size: 5000
+- md5: 975cb9ce76bc311d43c1b48bd9cdbf8d
+  size: 4901
   hash: md5
   path: model.txt
